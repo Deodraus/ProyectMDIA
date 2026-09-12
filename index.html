@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Técnica en Desarrollo de Software | Piensa • Diseña • Crea</title>
+  <meta name="description" content="Media Técnica en Desarrollo de Software. Aprende a programar, crear bases de datos, aplicaciones web e interactuar con Inteligencia Artificial mientras terminas tu bachillerato en Medellín.">
+  
+  <!-- Tipografías de Google Fonts: Plus Jakarta Sans y JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Iconos FontAwesome 6 (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos del Proyecto -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Fondo Cuadrícula Cyber-Tech -->
+  <div class="bg-grid-overlay"></div>
+
+  <!-- ==========================================================================
+       BARRA DE NAVEGACIÓN SUPERIOR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#inicio" class="brand-logo">
+        <div class="logo-shield-wrapper">
+          <img src="assets/images/escudo.jpeg" alt="Escudo Media Técnica en Desarrollo de Software">
+        </div>
+        <div class="brand-text">
+          <h1>MEDIA TÉCNICA</h1>
+          <span>Desarrollo de Software</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#que-es" class="nav-link">¿En qué consiste?</a></li>
+          <li><a href="#logros" class="nav-link">¿Qué lograrás?</a></li>
+          <li><a href="#oportunidades" class="nav-link">Oportunidades & IA</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiencia en Clase</a></li>
+          <li><a href="#aprender-diversion" class="nav-link">Aprender & Diversión</a></li>
+          <li><a href="#semilleros" class="nav-link">Semilleros Medellín</a></li>
+          <li><a href="#semilleros" class="nav-cta"><i class="fa-solid fa-code"></i> Explorar Rutas</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-menu-btn" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: TITULAR IMPACTANTE + ANIMACIÓN 3D THREE.JS
+         ========================================================================== -->
+    <section id="inicio" class="hero-section">
+      <div class="hero-container">
+        <!-- Columna de Texto Hero -->
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <span class="sticker-badge cyan"><i class="fa-solid fa-bolt"></i> Bachillerato + Técnica</span>
+          </div>
+
+          <h1 class="hero-title">
+            Domina el código que mueve al mundo con la <br>
+            <span class="text-gradient">Media Técnica en Software</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Transforma tu curiosidad en aplicaciones web reales, bases de datos interactivas y proyectos con Inteligencia Artificial. Prepárate desde el colegio para liderar la industria digital.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#que-es" class="btn-primary">
+              <i class="fa-solid fa-rocket"></i> Descubrir la Técnica
+            </a>
+            <a href="#semilleros" class="btn-secondary">
+              <i class="fa-solid fa-graduation-cap"></i> Semilleros en Medellín
+            </a>
+          </div>
+        </div>
+
+        <!-- Columna 3D: Canvas WebGL con Laptop y Holograma -->
+        <div class="hero-canvas-wrapper">
+          <div id="laptop-3d-canvas"></div>
+          <div class="canvas-hint">
+            <i class="fa-solid fa-hand-pointer"></i> Rota en 360° • Animación 3D Holográfica
+            <i class="fa-solid fa-arrow-rotate-right"></i> Uno de los proyectos construidos por un estudiante
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 1: ¿EN QUÉ CONSISTE LA MEDIA TÉCNICA? (tecnologia.jpeg)
+         ========================================================================== -->
+    <section id="que-es">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-microchip"></i></div>
+          <h2 class="section-title">¿En qué consiste la Media Técnica?</h2>
+          <p class="section-description">
+            Un puente directo entre la educación secundaria y la educación superior, enfocado en el desarrollo real de soluciones tecnológicas.
+          </p>
+        </div>
+
+        <div class="content-showcase-grid">
+          <!-- Tarjeta de Contenido Informativo -->
+          <div class="glass-panel" style="padding: 36px;">
+            <div class="speech-bubble" style="margin-bottom: 20px;">
+              💻 "Aquí no solo memorizamos teoría, construimos sistemas reales desde el día uno."
+            </div>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="feature-text">
+                  <h4>Desarrollo Web Fullstack</h4>
+                  <p>Aprende frontend moderno con HTML5, CSS, JavaScript y conceptos de interfaz, junto con backend estructurado.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon-box"><i class="fa-solid fa-database"></i></div>
+                <div class="feature-text">
+                  <h4>Gestión de Bases de Datos</h4>
+                  <p>Diseño y administración de bases de datos relacionales con MySQL y phpMyAdmin para almacenar y consultar información de usuarios.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Marco Fotográfico: tecnologia.jpeg -->
+          <div class="photo-frame-wrapper">
+            <span class="sticker-badge cyan photo-badge-floating badge-top-right">
+              <i class="fa-solid fa-code"></i> Proyecto GreenTask
+            </span>
+            <div class="photo-frame">
+              <img src="assets/images/tecnologia.jpeg" alt="Estudiante programando aplicación web GreenTask en la sala de sistemas">
+              <div class="photo-caption-bar">
+                <i class="fa-solid fa-circle-check" style="color: var(--vibrant-cyan);"></i>
+                <span>Estudiante implementando formulario web interactivo y conexión a base de datos.</span>
+              </div>
+            </div>
+            <span class="sticker-badge dark photo-badge-floating badge-bottom-left">
+              <i class="fa-solid fa-circle-nodes"></i> 100% en Salas Especializadas
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 2: ¿QUÉ SE PUEDE LOGRAR? (quehacemos.jpeg)
+         ========================================================================== -->
+    <section id="logros" style="background: rgba(12, 27, 61, 0.25);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-trophy"></i> Metas y Resultados</div>
+          <h2 class="section-title">¿Qué puedes lograr estudiando esta técnica?</h2>
+          <p class="section-description">
+            Desde la estructuración de bases de datos hasta la creación de plataformas completas: descubre todo lo que serás capaz de construir.
+          </p>
+        </div>
+
+        <div class="content-showcase-grid reversed">
+          <!-- Tarjeta de Contenido Informativo -->
+          <div class="glass-panel" style="padding: 36px;">
+            <span class="sticker-badge blue" style="margin-bottom: 20px;">
+              <i class="fa-solid fa-server"></i> Datos & Lógica Real
+            </span>
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 16px; color: var(--white-pure);">
+              De Estudiante a Desarrollador de Software
+            </h3>
+            <p style="margin-bottom: 18px;">
+              Al estudiar esta técnica de software, adquieres las habilidades más demandadas de la cuarta revolución industrial:
+            </p>
+
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+              <li style="display: flex; align-items: flex-start; gap: 12px;">
+                <i class="fa-solid fa-check" style="color: var(--vibrant-cyan); margin-top: 4px;"></i>
+                <span><strong>Crear aplicaciones completas:</strong> Plataformas de comercio, sistemas de gestión escolar, registros de usuarios y paneles administrativos.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 12px;">
+                <i class="fa-solid fa-check" style="color: var(--vibrant-cyan); margin-top: 4px;"></i>
+                <span><strong>Dominar SQL y Servidores:</strong> Modelar entidades relacionales, escribir consultas complejas y mantener la integridad de la información.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 12px;">
+                <i class="fa-solid fa-check" style="color: var(--vibrant-cyan); margin-top: 4px;"></i>
+                <span><strong>Ventaja universitaria gigante:</strong> Entrar a Ingeniería de Sistemas o Tecnología en Software con bases sólidas que te ponen años adelante.</span>
+              </li>
+            </ul>
+
+            <div class="tech-stack-pills">
+              <span class="tech-pill"><i class="fa-brands fa-html5"></i> HTML5</span>
+              <span class="tech-pill"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+              <span class="tech-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+              <span class="tech-pill"><i class="fa-brands fa-php"></i> PHP</span>
+              <span class="tech-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+              <span class="tech-pill"><i class="fa-solid fa-code"></i> Python</span>
+            </div>
+          </div>
+
+          <!-- Marco Fotográfico: quehacemos.jpeg -->
+          <div class="photo-frame-wrapper">
+            <span class="sticker-badge dark photo-badge-floating badge-top-right">
+              <i class="fa-solid fa-table-cells"></i> phpMyAdmin & MySQL
+            </span>
+            <div class="photo-frame">
+              <img src="assets/images/quehacemos.jpeg" alt="Estudiantes en el laboratorio analizando consultas SQL y tablas de bases de datos">
+              <div class="photo-caption-bar">
+                <i class="fa-solid fa-layer-group" style="color: var(--vibrant-cyan);"></i>
+                <span>Diseño y consulta de tablas de bases de datos relacionales en tiempo real.</span>
+              </div>
+            </div>
+            <span class="sticker-badge cyan photo-badge-floating badge-bottom-left">
+              <i class="fa-solid fa-brain"></i> Lógica Estructurada
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 3: OPORTUNIDADES & ERA DE LA IA (oportunidades.jpeg)
+         ========================================================================== -->
+    <section id="oportunidades">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-chart-line"></i> Futuro y Empleabilidad</div>
+          <h2 class="section-title">Oportunidades que Tendrás</h2>
+          <p class="section-description">
+            El software es el motor del presente y del futuro. Aprende con las herramientas más potentes del planeta como ChatGPT, Grok, Gemini, Claude Code, etc.
+          </p>
+        </div>
+
+        <div class="content-showcase-grid">
+          <!-- Marco Fotográfico: oportunidades.jpeg -->
+          <div class="photo-frame-wrapper">
+            <span class="sticker-badge cyan photo-badge-floating badge-top-right">
+              <i class="fa-solid fa-robot"></i> ChatGPT • Grok • Copilot • Meta
+            </span>
+            <div class="photo-frame">
+              <img src="assets/images/oportunidades.jpeg" alt="Inteligencia Artificial y oportunidades en desarrollo de software">
+              <div class="photo-caption-bar">
+                <i class="fa-solid fa-wand-magic-sparkles" style="color: var(--vibrant-cyan);"></i>
+                <span>Programación asistida por Inteligencia Artificial y computación cognitiva.</span>
+              </div>
+            </div>
+            <span class="sticker-badge dark photo-badge-floating badge-bottom-left">
+              <i class="fa-solid fa-earth-americas"></i> Trabajo Global Remoto
+            </span>
+          </div>
+
+          <!-- Texto descriptivo de Oportunidades -->
+          <div class="glass-panel" style="padding: 36px;">
+            <div class="speech-bubble" style="margin-bottom: 20px;">
+              🚀 "¿Sabías que los desarrolladores de software tienen una tasa de empleabilidad superior al 95%?"
+            </div>
+
+            <h3 style="font-size: 1.6rem; margin-bottom: 16px; color: var(--white-pure);">
+              Un Sector con Alta Demanda y Sueldos Competitivos
+            </h3>
+            <p style="margin-bottom: 20px;">
+              Medellín se ha consolidado como el centro de innovación de América Latina gracias al <strong>Distrito Especial de Ciencia, Tecnología e Innovación</strong>. Las empresas locales e internacionales buscan constantemente talento joven capaz de construir código limpio y solucionar problemas con tecnología.
+            </p>
+
+            <div class="feature-list">
+              <div class="feature-item">
+                <div class="feature-icon-box"><i class="fa-solid fa-brain"></i></div>
+                <div class="feature-text">
+                  <h4>Habilidades de IA para Acelerar Código</h4>
+                  <p>Aprende a comunicarte con modelos generativos (Prompt Engineering) para corregir errores, crear pruebas y prototipar en minutos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rejilla de Oportunidades -->
+        <div class="opportunities-grid">
+          <div class="glass-panel opportunity-card">
+            <span class="card-icon">🌍</span>
+            <h3>Trabajo Remoto & Global</h3>
+            <p>El código es universal. Con una computadora e internet puedes trabajar para empresas de cualquier rincón del mundo desde Medellín.</p>
+          </div>
+
+          <div class="glass-panel opportunity-card">
+            <span class="card-icon">💡</span>
+            <h3>Emprendimiento Tech</h3>
+            <p>Si tienes una idea, la Media Técnica te enseña a convertirla en una startup o plataforma funcional sin depender de otros.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 4: BUENA EXPERIENCIA EN CLASES (catalina.jpeg)
+         ========================================================================== -->
+    <section id="experiencia" style="background: rgba(12, 27, 61, 0.25);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-heart"></i> Ambiente de Clase</div>
+          <h2 class="section-title">Una Experiencia que Marca la Diferencia</h2>
+          <p class="section-description">
+            Aprender a programar es un camino retador pero emocionante, guiado por docentes apasionados y un ambiente donde todos nos apoyamos.
+          </p>
+        </div>
+
+        <div class="content-showcase-grid reversed">
+          <!-- Información sobre docencia y experiencia -->
+          <div class="glass-panel experience-card-large" style="padding: 36px;">
+            <div>
+              <span class="sticker-badge cyan" style="margin-bottom: 18px;">
+                <i class="fa-solid fa-chalkboard-user"></i> Mentoría Dedicada
+              </span>
+              <h3 style="font-size: 1.65rem; margin-bottom: 16px; color: var(--white-pure);">
+                Docentes Cercanos y Pacientes.
+              </h3>
+              <p>
+                El aula se convierte en un espacio seguro para equivocarse sin miedo: porque en programación, <em>cada error es solo una oportunidad para aprender algo nuevo</em>.
+              </p>
+            </div>
+
+            <div class="fun-badge-container">
+              <span class="sticker-badge blue"><i class="fa-solid fa-comments"></i> Explicaciones Claras</span>
+              <span class="sticker-badge dark"><i class="fa-solid fa-lightbulb"></i> Proyectos con Futuro</span>
+            </div>
+          </div>
+
+          <!-- Marco Fotográfico: catalina.jpeg -->
+          <div class="photo-frame-wrapper">
+            <span class="sticker-badge blue photo-badge-floating badge-top-right">
+              <i class="fa-solid fa-sparkles"></i> Clase Particular:
+            </span>
+            <div class="photo-frame">
+              <img src="assets/images/catalina.jpeg" alt="La profesora Catalina y estudiantes sonriendo mientras revisan código en un portátil decorado con stickers">
+            </div>
+            <span class="sticker-badge dark photo-badge-floating badge-bottom-left">
+              <i class="fa-solid fa-heart"></i> M.T.D.S
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 5: APRENDER & DIVERSIÓN + TRABAJO EN EQUIPO (aprender.jpeg & juntos.jpeg)
+         ========================================================================== -->
+    <section id="aprender-diversion">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-gamepad"></i> Cultura Estudiantil</div>
+          <h2 class="section-title">¡Aquí aprenderás mucho y te divertirás!</h2>
+          <p class="section-description">
+            Aquí la programación se vive con dinamismo, compañerismo, retos interactivos y muchas risas.
+          </p>
+        </div>
+
+        <div class="cards-mosaic">
+          <!-- Tarjeta 1: aprender.jpeg -->
+          <div class="glass-panel" style="padding: 30px;">
+            <div class="photo-frame-wrapper" style="margin-bottom: 24px;">
+              <span class="sticker-badge cyan photo-badge-floating badge-top-right">
+                <i class="fa-solid fa-thumbs-up"></i> ¡100% Actitud!
+              </span>
+              <div class="photo-frame" style="height: 290px;">
+                <img src="assets/images/aprender.jpeg" alt="Estudiantes haciendo pulgar arriba felices en el aula de sistemas" style="height: 290px;">
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.4rem; color: var(--white-pure); margin-bottom: 10px;">
+              Aquí aprenderás mucho y te divertirás
+            </h3>
+            <p style="font-size: 0.95rem; margin-bottom: 16px;">
+              No necesitas ser un genio de las matemáticas ni haber escrito código antes. Lo único que necesitas es curiosidad y ganas de crear cosas increíbles con tus propias manos.
+            </p>
+
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="tech-pill"><i class="fa-solid fa-trophy"></i> Retos </span>
+              <span class="tech-pill"><i class="fa-solid fa-music"></i> Clases </span>
+              <span class="tech-pill"><i class="fa-solid fa-check-double"></i> Proyectos que te apasionan</span>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: juntos.jpeg -->
+          <div class="glass-panel" style="padding: 30px;">
+            <div class="photo-frame-wrapper" style="margin-bottom: 24px;">
+              <span class="sticker-badge dark photo-badge-floating badge-top-right">
+                <i class="fa-solid fa-people-group"></i> Pair Programming
+              </span>
+              <div class="photo-frame" style="height: 290px;">
+                <img src="assets/images/juntos.jpeg" alt="Grupo de estudiantes colaborando juntos frente a dos pantallas resolviendo un ejercicio de programación" style="height: 290px;">
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.4rem; color: var(--white-pure); margin-bottom: 10px;">
+              Aprende mientras juegas y colaboras
+            </h3>
+            <p style="font-size: 0.95rem; margin-bottom: 16px;">
+              La programación en la vida real es un deporte de equipo. En nuestras clases programamos en equipos, compartimos ideas y encontramos soluciones juntos en las pantallas de código.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN 6: SEMILLEROS GRATUITOS EN MEDELLÍN
+         ========================================================================== -->
+    <section id="semilleros" style="background: rgba(12, 27, 61, 0.25);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag"><i class="fa-solid fa-seedling"></i> Oportunidades Abiertas</div>
+          <h2 class="section-title">Semilleros Gratuitos de Software en Medellín</h2>
+          <p class="section-description">
+            Medellín cuenta con uno de los ecosistemas públicos y gratuitos de formación tecnológica más amplios de Colombia. Conoce los semilleros, bootcamps y cursos a los que puedes acceder sin pagar un solo peso.
+          </p>
+        </div>
+
+        <!-- Barra de Filtros -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">Todos los Semilleros</button>
+          <button class="filter-btn" data-filter="cvs">Alcaldía & CVS</button>
+          <button class="filter-btn" data-filter="rutan">Ruta N</button>
+          <button class="filter-btn" data-filter="mintic">Talento Tech MinTIC</button>
+          <button class="filter-btn" data-filter="sena-uni">SENA & Universidades</button>
+        </div>
+
+        <!-- Tarjetas de Semilleros -->
+        <div class="semilleros-grid">
+          <!-- 1. Centros del Valle del Software (CVS) -->
+          <div class="glass-panel semillero-card" data-category="cvs">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">Alcaldía de Medellín</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">Centros del Valle del Software (CVS)</h3>
+              <p class="semillero-desc">
+                Espacios físicos dotados de tecnología en las 16 comunas y 5 corregimientos de Medellín. Ofrecen semilleros barriales de programación web, robótica, modelado 3D y lógica computacional para jóvenes escolares.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-location-dot" style="color: var(--vibrant-cyan);"></i>
+                  <span>Presencial en todas las comunas de Medellín</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-user-check" style="color: var(--vibrant-cyan);"></i>
+                  <span>Para jóvenes, estudiantes y comunidad general</span>
+                </div>
+              </div>
+              <a href="https://www.medellin.gov.co" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Conoce tu CVS más cercano
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Ruta N - Semilleros de Talento Tech -->
+          <div class="glass-panel semillero-card" data-category="rutan">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">Corporación Ruta N</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">Ruta N: Semilleros de Código e Innovación</h3>
+              <p class="semillero-desc">
+                El corazón de la innovación en Medellín. Ruta N lidera iniciativas de formación acelerada en habilidades digitales del siglo XXI, algoritmia, ciencia de datos e Inteligencia Artificial, conectando a los jóvenes con empresas tech.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-building" style="color: var(--vibrant-cyan);"></i>
+                  <span>Complejo Ruta N (Sevilla, Medellín) & Virtual</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-clock" style="color: var(--vibrant-cyan);"></i>
+                  <span>Convocatorias trimestrales periódicas</span>
+                </div>
+              </div>
+              <a href="https://www.rutanmedellin.org" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Visitar Convocatorias Ruta N
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Talento Tech MinTIC -->
+          <div class="glass-panel semillero-card" data-category="mintic">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">MinTIC + Nodo Antioquia</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">Talento Tech: Bootcamps Intensivos</h3>
+              <p class="semillero-desc">
+                La estrategia nacional de campamentos intensivos de entrenamiento tecnológico bajo metodología bootcamp. Aprende Desarrollo Fullstack, Inteligencia Artificial, Blockchain, Análisis de Datos y Cloud con certificación oficial.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-laptop" style="color: var(--vibrant-cyan);"></i>
+                  <span>Modalidad Híbrida y 100% Virtual</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-award" style="color: var(--vibrant-cyan);"></i>
+                  <span>Certificación Ministerial Gratuita</span>
+                </div>
+              </div>
+              <a href="https://talentotech.gov.co" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Inscripciones Talento Tech
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. SENA Medellín: Tecnoparque & Nodo de Software -->
+          <div class="glass-panel semillero-card" data-category="sena-uni">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">SENA Regional Antioquia</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">SENA Tecnoparque & Cursos de Software</h3>
+              <p class="semillero-desc">
+                Cursos complementarios gratuitos en desarrollo de software, Python, bases de datos SQL y desarrollo de apps móviles. Además, la Red Tecnoparque en Medellín asesora proyectos tecnológicos de estudiantes de colegio.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-school" style="color: var(--vibrant-cyan);"></i>
+                  <span>Complejo SENA Pedregal & Centro Medellín</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-id-badge" style="color: var(--vibrant-cyan);"></i>
+                  <span>Requisito: Ser estudiante o mayor de 14 años</span>
+                </div>
+              </div>
+              <a href="https://oferta.senasofiaplus.edu.co" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Portal SENA Sofía Plus
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Semilleros Universitarios Abiertos (ITM, Pascual Bravo, EAFIT) -->
+          <div class="glass-panel semillero-card" data-category="sena-uni">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">Instituciones de Educación Superior</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">Semilleros Universitarios Abiertos</h3>
+              <p class="semillero-desc">
+                El ITM, la I.U. Pascual Bravo, el Politécnico Jaime Isaza Cadavid y la Universidad EAFIT abren semilleros y clubes juveniles de robótica, algoritmia competitiva y desarrollo web para estudiantes de grados 9°, 10° y 11°.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-building-columns" style="color: var(--vibrant-cyan);"></i>
+                  <span>Campus universitarios de Medellín</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-bullseye" style="color: var(--vibrant-cyan);"></i>
+                  <span>Enfoque en articulación y vocación temprana</span>
+                </div>
+              </div>
+              <a href="https://sapiencia.gov.co" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Consultar Rutas en Sapiencia
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Cursos @Medellin y Academia Digital -->
+          <div class="glass-panel semillero-card" data-category="cvs">
+            <div>
+              <div class="semillero-header">
+                <span class="semillero-entity">Educación Digital Medellín</span>
+                <span class="semillero-tag-free">Gratis</span>
+              </div>
+              <h3 class="semillero-title">Academia Digital & Arroba Medellín</h3>
+              <p class="semillero-desc">
+                Plataforma virtual de la ciudad con rutas de autoaprendizaje guiado en pensamiento computacional, lenguajes de programación frontend, ciberseguridad básica y herramientas de inteligencia artificial para jóvenes.
+              </p>
+            </div>
+            <div>
+              <div class="semillero-meta">
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-globe" style="color: var(--vibrant-cyan);"></i>
+                  <span>100% Virtual a tu propio ritmo</span>
+                </div>
+                <div class="semillero-meta-row">
+                  <i class="fa-solid fa-certificate" style="color: var(--vibrant-cyan);"></i>
+                  <span>Insignias y constancias descargables</span>
+                </div>
+              </div>
+              <a href="https://arrobamedellin.edu.co" target="_blank" rel="noopener noreferrer" class="semillero-cta">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Explorar Cursos Virtuales
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CALL TO ACTION INSPIRACIONAL
+         ========================================================================== -->
+    <section style="padding: 70px 24px;">
+      <div class="container">
+        <div class="glass-panel" style="padding: 50px 30px; text-align: center; border-color: var(--vibrant-cyan); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(0, 210, 255, 0.15); filter: blur(50px); border-radius: 50%;"></div>
+          
+          <div class="speech-bubble" style="margin-bottom: 20px;">
+            ✨ ¡Tu futuro en tecnología empieza con nosotros!
+          </div>
+
+          <h2 style="font-size: clamp(2rem, 3.5vw, 2.7rem); margin-bottom: 16px;">
+            ¿Listo para construir el software del mañana?
+          </h2>
+
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+            <a href="#semilleros" class="btn-primary">
+              <i class="fa-solid fa-compass"></i> Ver Semilleros Disponibles
+            </a>
+            <a href="#inicio" class="btn-secondary">
+              <i class="fa-solid fa-arrow-up"></i> Volver Arriba
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="footer-shield">
+            <img src="assets/images/escudo.jpeg" alt="Escudo Media Técnica Software">
+          </div>
+          <div>
+            <h3 style="font-size: 1.25rem; color: var(--white-pure);">MEDIA TÉCNICA SOFTWARE</h3>
+            <div class="footer-motto">Logic • Structure • Iterate • Build</div>
+          </div>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); max-width: 380px;">
+          Programa formativo especializado en desarrollo de software, bases de datos y arquitectura web. Formando los líderes digitales de Medellín y el mundo.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación Rápida</h4>
+        <ul class="footer-links">
+          <li><a href="#que-es"><i class="fa-solid fa-chevron-right"></i> ¿En qué consiste?</a></li>
+          <li><a href="#logros"><i class="fa-solid fa-chevron-right"></i> ¿Qué lograrás?</a></li>
+          <li><a href="#oportunidades"><i class="fa-solid fa-chevron-right"></i> Oportunidades & IA</a></li>
+          <li><a href="#experiencia"><i class="fa-solid fa-chevron-right"></i> Experiencia en Clase</a></li>
+          <li><a href="#semilleros"><i class="fa-solid fa-chevron-right"></i> Semilleros en Medellín</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Filosofía del Código</h4>
+        <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
+          <div><strong style="color: var(--vibrant-cyan);">THINK:</strong> Analiza el problema con lógica y empatía.</div>
+          <div><strong style="color: var(--vibrant-cyan);">DESIGN:</strong> Modela la solución y las bases de datos.</div>
+          <div><strong style="color: var(--vibrant-cyan);">CREATE:</strong> Escribe código limpio y transforma realidades.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Media Técnica en Desarrollo de Software. Medellín, Colombia.</div>
+      <div>&copy; 2026 Deodraus. Jeronimo Deossa Abad. Medellín, Colombia.</div>
+    </div>
+  </footer>
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Scripts del Proyecto -->
+  <script src="js/laptop3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
