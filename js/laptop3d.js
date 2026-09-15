@@ -17,6 +17,7 @@
   // Variables principales de Three.js
   let scene, camera, renderer;
   let laptopBase, screenHingeGroup, screenMesh, screenDisplay;
+  let HINGE_ANGLE_CLOSED, HINGE_ANGLE_OPEN;
   let hologramGroup, codePlane, dbGroup, beamMesh, particlesSystem;
   let animatedNodes = [];
   let clock = new THREE.Clock();
@@ -304,8 +305,15 @@
     screenDisplay.position.set(0, 1.15, 0.082);
     screenHingeGroup.add(screenDisplay);
 
-    // Inicialmente ángulo casi cerrado para la animación
-    screenHingeGroup.rotation.x = THREE.MathUtils.degToRad(15);
+    // Ángulos de la pantalla respecto a la bisagra:
+    // En Three.js, rotación X = 0° es posición vertical (90° respecto a la base).
+    // Para cerrar hacia la base (90° de la vertical), el ángulo X aumenta hacia +90°.
+    // Ángulo semi-cerrado sobrando 10° respecto a la base: 90° - 10° = 80°.
+    HINGE_ANGLE_CLOSED = THREE.MathUtils.degToRad(80); // Sobrando 10° respecto a la base (90° - 10° = 80°)
+    HINGE_ANGLE_OPEN = THREE.MathUtils.degToRad(-12);   // 102° abierta respecto a la base (90° - (-12°) = 102°)
+
+    // Inicialmente ángulo semi-cerrado para la animación (sobrando 10° con la base)
+    screenHingeGroup.rotation.x = HINGE_ANGLE_CLOSED;
 
     scene.add(screenHingeGroup);
   }
@@ -510,7 +518,7 @@
     wCtx.fillStyle = '#00d2ff';
     wCtx.fillText('⚡ 60 FPS • WebGL 3D', 30, 85);
     wCtx.fillStyle = '#94a3b8';
-    wCtx.fillText('Base de Datos Sync: 100%', 30, 108);
+    wCtx.fillText('Base de Datos Sync: 100%', 30, 80);
 
     const widgetTex = new THREE.CanvasTexture(widgetCanvas);
     const widgetMat = new THREE.MeshBasicMaterial({
@@ -660,24 +668,24 @@
     let hologramScale;
 
     if (cycleTime < 2.5) {
-      // Fase 1: Se abre suavemente desde 15° hasta 108°
+      // Fase 1: Se abre suavemente desde el ángulo de reposo (sobrando 10° con la base) hasta abierta
       const progress = cycleTime / 2.5;
       const ease = Math.sin((progress * Math.PI) / 2); // Ease out
-      targetHingeAngle = THREE.MathUtils.degToRad(15 + ease * 93);
+      targetHingeAngle = THREE.MathUtils.lerp(HINGE_ANGLE_CLOSED, HINGE_ANGLE_OPEN, ease);
       hologramScale = Math.max(0.001, (progress - 0.2) / 0.8);
     } else if (cycleTime < 8.0) {
-      // Fase 2: Totalmente abierta, el holograma brilla con máxima actividad
-      targetHingeAngle = THREE.MathUtils.degToRad(108);
+      // Fase 2: Totalmente abierta (102° con la base), el holograma brilla con máxima actividad
+      targetHingeAngle = HINGE_ANGLE_OPEN;
       hologramScale = 1.0;
     } else if (cycleTime < 9.5) {
-      // Fase 3: Se cierra suavemente
+      // Fase 3: Se cierra suavemente hasta quedar sobrando un ángulo de 10° con la base
       const progress = (cycleTime - 8.0) / 1.5;
       const ease = (1 - Math.cos(progress * Math.PI)) / 2; // Smoothstep
-      targetHingeAngle = THREE.MathUtils.degToRad(108 - ease * 93);
+      targetHingeAngle = THREE.MathUtils.lerp(HINGE_ANGLE_OPEN, HINGE_ANGLE_CLOSED, ease);
       hologramScale = Math.max(0.001, 1.0 - progress * 1.2);
     } else {
-      // Fase 4: Pausa breve antes de abrirse nuevamente
-      targetHingeAngle = THREE.MathUtils.degToRad(15);
+      // Fase 4: Pausa breve semi-cerrada (sobrando 10°) antes de abrirse nuevamente
+      targetHingeAngle = HINGE_ANGLE_CLOSED;
       hologramScale = 0.001;
     }
 
